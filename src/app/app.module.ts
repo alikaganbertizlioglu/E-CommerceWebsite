@@ -4,7 +4,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './homepage/homepage.component';
+import { HeaderComponent } from './header/header.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {Component} from '@angular/core';
 import { NgImageSliderModule } from 'ng-image-slider';
@@ -12,7 +12,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
