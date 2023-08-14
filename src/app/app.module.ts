@@ -8,11 +8,18 @@ import { HeaderComponent } from './header/header.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {Component} from '@angular/core';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsComponent } from './products/products.component';
+import { RouterModule, Routes } from '@angular/router';
+import { SearchComponent } from './products/search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProductsComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +27,9 @@ import { NgImageSliderModule } from 'ng-image-slider';
     MatToolbarModule,
     MatButtonModule,
     MatMenuModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    HttpClientModule,
+    FormsModule
   ], 
   providers: [],
   bootstrap: [AppComponent]

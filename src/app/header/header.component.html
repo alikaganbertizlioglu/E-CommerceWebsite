@@ -18,6 +18,9 @@
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
   rel="stylesheet"
 />
+<div class="xyz--top--header" >
+  <p><strong>New items has arrived !</strong></p>
+</div>
 <div class="xyz--header">
   <div class="xyz-logo">
     <!-- <img src="images/logo.jpeg"> -->
@@ -33,17 +36,14 @@
     <div class="xyz--bottom--bar">
       <div class="xyz-menu">
         <a href="#">Home</a>
-        <a href="#">Products</a>
+        <a routerLink="/products" href="#">Products</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
       </div>
-      <div class="xyz--search-bar">
-        <input type="text" class="xyz-search-box" placeholder="Search" />
-        <i class="fa fa fa-search" aria-hidden="true"></i>
-        <button style="float: right;" class="xyz--search--btn">
-          <span class="material-symbols-outlined"> search </span>
-        </button>
-      </div>
+
     </div>
   </div>
 </div>
+
+<app-search></app-search>
+<router-outlet></router-outlet>

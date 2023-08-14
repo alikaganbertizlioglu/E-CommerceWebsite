@@ -1,4 +1,13 @@
 
+.xyz--top--header{
+
+  height: 5vh;
+  text-align: center;
+  padding-top: 1.5vh;
+  background-color: red;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 .xyz--header {
   width: 100%;
   display: flex;
@@ -10,7 +19,7 @@
   padding: 1.2vh 8vh;
   font-size: 40px;
   font-weight: bold;
-  color: #36454f;
+  color: red;
   font-family: "Concert One", cursive;
   width: 20%;
 }
