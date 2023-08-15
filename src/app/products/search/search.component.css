@@ -1,16 +1,17 @@
 .xyz--search--product {
-  margin: 20px auto;
+  margin: 10px auto;
   text-align: center;
 }
 .btn-search-disabled {
   height: 5.5vh;
-  padding: 12px 30px;
+  padding: 12px 10px;
   color:#999;
+  border: #aaa 1px solid;
   cursor: not-allowed;
 }
 .xyz-search-product-input {
-  width: 40%;
-  height: 5.5vh;
+  width: 30%;
+  height: 3.5vh;
   padding: 1px 10px;
   outline: none;
   border-radius: 2px;

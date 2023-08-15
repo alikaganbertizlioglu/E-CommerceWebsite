@@ -13,13 +13,15 @@ import { ProductsComponent } from './products/products.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SearchComponent } from './products/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ProductsComponent,
-    SearchComponent
+    SearchComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
