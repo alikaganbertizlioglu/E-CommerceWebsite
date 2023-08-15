@@ -1,0 +1,9 @@
+.xyz--contact--container {
+    margin: 20px auto;
+    padding: 0px;
+    padding-left: 10%;
+    padding-right: 3%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  

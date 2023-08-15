@@ -14,6 +14,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { SearchComponent } from './products/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
+import {  ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ContactComponent } from './contact/contact.component';
     MatMenuModule,
     NgImageSliderModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule
   ], 
   providers: [],
   bootstrap: [AppComponent]
