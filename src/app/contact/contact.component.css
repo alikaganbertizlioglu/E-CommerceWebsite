@@ -1,9 +1,15 @@
-.xyz--contact--container {
-    margin: 20px auto;
-    padding: 0px;
-    padding-left: 10%;
-    padding-right: 3%;
-    display: flex;
-    flex-wrap: wrap;
-  }
+
   
+  .map-container-2{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+  .map-container-2 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
