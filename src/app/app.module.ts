@@ -16,6 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 import {  ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductComponent } from './products/product/product.component';
+import { FilterComponent } from './products/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     ProductsComponent,
     SearchComponent,
-    ContactComponent
+    ContactComponent,
+    ProductComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

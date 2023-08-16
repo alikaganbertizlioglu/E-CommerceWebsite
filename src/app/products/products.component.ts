@@ -3,13 +3,13 @@ import { HttpClient } from '@angular/common/http';
 
 
 interface PRODUCT {
-  id: Number;
+  id: number;
   title: String;
-  description:String;
-  price: Number;
-  discountPercentage:Number;
-  rating: Number;
-  stock: Number;
+  description: String;
+  price: number;
+  discountPercentage: number;
+  rating: number;
+  stock: number;
   brand: String;
   category: String;
   thumbnail: String;
@@ -28,12 +28,12 @@ interface QUERYRESULT {
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
-  dummyresult:any;
-  products!:PRODUCT[];
+  dummyresult: any;
+  products!: PRODUCT[];
 
   readonly APIUrl = "https://localhost:7083";
   constructor(protected http: HttpClient) { }
-  
+
 
   async ngOnInit() {
     console.log("productsa gitti");
@@ -49,5 +49,35 @@ export class ProductsComponent {
     this.dummyresult = data;
     this.products = this.dummyresult;
   }
+
+  getNumberOfProducts() {
+    return this.products.length;
+  }
+
+  getInStockProducts() {
+    let counter = 0;
+    for (let index = 0; index < this.products.length; index++) {
+      const element = this.products[index];
+      if (element.stock > 0) {
+        counter++;
+      }
+    }
+    return counter;
+  }
+
+  getOutOfStockProducts() {
+    let counter = 0;
+
+    for (let index = 0; index < this.products.length; index++) {
+      const element = this.products[index];
+
+      if (element.stock <= 0) {
+        counter++;
+      }
+
+    }
+    return counter;
+  }
+
 
 }
