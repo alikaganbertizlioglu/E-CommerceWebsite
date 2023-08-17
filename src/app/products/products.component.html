@@ -1,4 +1,8 @@
+
+<app-search (searchTextChanged)="setSearchText($event)" ></app-search>
 <app-filter [all]="getNumberOfProducts()" [inStock]="getInStockProducts()" [outOfStock]="getOutOfStockProducts()" ></app-filter>
+<hr>
 <div class="xyz--products--container">
-    <app-product *ngFor="let prod of products" [product]="prod"></app-product>
+    <app-product *ngFor="let prod of products" [product]="prod" [searchText]="searchText" (click)="selectedProduct = prod" ></app-product>
+    <product-detail *ngIf="selectedProduct"></product-detail>
 </div>

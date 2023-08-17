@@ -1,25 +1,21 @@
 import { Component, Input } from '@angular/core';
-
+import { Product } from 'src/app/Models/Product';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
+    
+  @Input()
+  searchText: string;
+  
+  func(){
+    console.log(this.searchText);
+    
+  }
 
   @Input()
-  product : {
-    id: number;
-    title: String;
-    description:String;
-    price: number;
-    discountPercentage:number;
-    rating: number;
-    stock: number;
-    brand: String;
-    category: String;
-    thumbnail: String;
-    images0: String;
-  };
+  product : Product;
 
 }

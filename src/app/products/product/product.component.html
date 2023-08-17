@@ -1,4 +1,4 @@
-<div class="xyz--product--item" >
+<div class="xyz--product--item" *ngIf="product.title.toLowerCase().includes(searchText.toLowerCase())" >
     <div class="xyz--wishlist-sale-container">
       <div class="xyz--add--to--wishlist">
         <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -7,6 +7,7 @@
     </div>
     <div class="xyz--product--image">
       <img [src]="product.images0" class="xyz--product--image" />
+      <!-- <img class="xyz--product--image" src="product.images0" alt=""> -->
     </div>
     <div class="xyz--add--to--price">{{ product.price }} TL</div>
     <div class="xyz--product--name">{{ product.title }}</div>

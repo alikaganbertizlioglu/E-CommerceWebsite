@@ -1,35 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Product } from '../Models/Product';
 
 
-interface PRODUCT {
-  id: number;
-  title: String;
-  description: String;
-  price: number;
-  discountPercentage: number;
-  rating: number;
-  stock: number;
-  brand: String;
-  category: String;
-  thumbnail: String;
-  images0: String;
-}
-
-interface QUERYRESULT {
-  products: PRODUCT[];
-  total: Number;
-  skip: Number;
-  limit: Number;
-}
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
+  selectedProduct : Product;
   dummyresult: any;
-  products!: PRODUCT[];
+  products!: Product[];
+  
+  @Input()
+  searchText: string = "";
 
   readonly APIUrl = "https://localhost:7083";
   constructor(protected http: HttpClient) { }
@@ -79,5 +64,11 @@ export class ProductsComponent {
     return counter;
   }
 
+  setSearchText(value:string){
+    this.searchText=value;
+  }
+
+  
+  
 
 }

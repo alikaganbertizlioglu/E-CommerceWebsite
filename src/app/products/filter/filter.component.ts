@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class FilterComponent {
 
+  //BU CLASSI DOLDUR
   @Input()
   all:number = 0;
   @Input()
