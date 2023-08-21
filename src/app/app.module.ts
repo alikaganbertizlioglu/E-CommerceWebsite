@@ -19,7 +19,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductComponent } from './products/product/product.component';
 import { FilterComponent } from './products/filter/filter.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
-
+import { LoginComponent } from './login/login.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { MatCardModule} from '@angular/material/card';
+import { RegisterComponent } from './register/register.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +34,9 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ContactComponent,
     ProductComponent,
     FilterComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +48,11 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+      MatSlideToggleModule,
+      MatFormFieldModule,
+      MatInputModule,
+      MatCardModule
   ], 
   providers: [],
   bootstrap: [AppComponent]

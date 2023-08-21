@@ -1,0 +1,43 @@
+<br><br>
+
+
+ <form class="example-form">
+ <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+          <mat-card-title class="color">REGISTER</mat-card-title><br>
+        </mat-card-header>
+    <form class="example-form">
+          <mat-card-content>
+            
+        <mat-form-field class="example-full-width">
+                <input matInput placeholder="First Name" name="name" [(ngModel)]="name">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Last Name" name="surname" [(ngModel)]="surname">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" name="email" [(ngModel)]="surname">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Address" name="adress" [(ngModel)]="surname"></textarea>
+    </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Username" name="username" [(ngModel)]="username">
+            </mat-form-field>
+
+             <mat-form-field class="example-full-width">
+              <input matInput placeholder="Password" value="" name="password" type="password" [(ngModel)]="password">
+            </mat-form-field>
+
+          </mat-card-content><br>
+          <button mat-stroked-button color="accent" class="btn-block" (click)="submit()" >LOGIN</button>
+          <div class="form-element" *ngIf="show">
+            <button mat-button color="accent">Login success !!</button>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+ </form>
