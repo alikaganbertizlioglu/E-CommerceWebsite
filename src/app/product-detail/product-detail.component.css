@@ -60,7 +60,7 @@
     border:#FFC000 2px solid;
     border-radius: 5px;
 }
-.xyz-product-detail-stock{
+.xyz-product-detail-size{
     margin: 30px 0px;
 }
 span{
@@ -68,12 +68,12 @@ span{
     margin: 5px 5px;
     border-radius: 5px;
 }
-.xyz-product-detail-available-stock{
+.xyz-product-detail-available-size{
     margin: 0px 0px;
     background-color: #28282B; 
     color:white;
-    border-radius: 5px;
-    padding: 10px 35px;
+    border-radius: 0px;
+    padding: 10px 15px;
     font-size: 16px;
 }
 .xyz-product-detail-available-color{

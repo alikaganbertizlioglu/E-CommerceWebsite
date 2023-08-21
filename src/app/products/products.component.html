@@ -4,5 +4,5 @@
 <hr>
 <div class="xyz--products--container">
     <app-product *ngFor="let prod of products" [product]="prod" [searchText]="searchText" (click)="selectedProduct = prod" ></app-product>
-    <product-detail *ngIf="selectedProduct" [product]="selectedProduct"></product-detail>
+    <product-detail *ngIf="selectedProduct"></product-detail>
 </div>
