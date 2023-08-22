@@ -16,7 +16,11 @@ export class ProductsComponent {
   @Input()
   searchText: string = "";
 
+<<<<<<< Updated upstream
   readonly APIUrl = "http://localhost:5172";
+=======
+  readonly APIUrl = "https://localhost:5172";
+>>>>>>> Stashed changes
   constructor(protected http: HttpClient) { }
 
 
