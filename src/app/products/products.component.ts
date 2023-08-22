@@ -16,7 +16,7 @@ export class ProductsComponent {
   @Input()
   searchText: string = "";
 
-  readonly APIUrl = "https://localhost:7083";
+  readonly APIUrl = "http://localhost:5172";
   constructor(protected http: HttpClient) { }
 
 
