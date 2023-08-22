@@ -9,18 +9,16 @@ import { Product } from '../Models/Product';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
-  selectedProduct : Product;
+  selectedProduct: Product;
   dummyresult: any;
   products!: Product[];
-  
+
   @Input()
   searchText: string = "";
 
-<<<<<<< Updated upstream
+
   readonly APIUrl = "http://localhost:5172";
-=======
-  readonly APIUrl = "https://localhost:5172";
->>>>>>> Stashed changes
+
   constructor(protected http: HttpClient) { }
 
 
@@ -68,11 +66,11 @@ export class ProductsComponent {
     return counter;
   }
 
-  setSearchText(value:string){
-    this.searchText=value;
+  setSearchText(value: string) {
+    this.searchText = value;
   }
 
-  
-  
+
+
 
 }
