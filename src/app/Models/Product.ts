@@ -11,5 +11,5 @@ export class Product{
     brand: String;
     category: String;
     thumbnail: String;
-    images0: String;
+    image: String;
 }

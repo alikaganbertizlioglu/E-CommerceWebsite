@@ -10,67 +10,58 @@ import { Product } from '../Models/Product';
 })
 export class ProductsComponent {
   selectedProduct: Product;
-  dummyresult: any;
   products!: Product[];
 
   @Input()
   searchText: string = "";
 
-
-  readonly APIUrl = "http://localhost:5172";
+  readonly APIUrl = "https://fakestoreapi.com/";
 
   constructor(protected http: HttpClient) { }
 
-
   async ngOnInit() {
-    console.log("productsa gitti");
     await this.getProducts(); // Wait for getProducts to complete
-    console.log(this.products[1]);
-    console.log(this.products[3]);
-
   }
 
+
+  
   async getProducts() {
-    this.products = [];
-    const data = await this.http.get(this.APIUrl + '/getProducts').toPromise();
-    this.dummyresult = data;
-    this.products = this.dummyresult;
+    this.products = await this.http.get<Product[]>(this.APIUrl + 'products').toPromise();
   }
+  
+
 
   getNumberOfProducts() {
     return this.products.length;
   }
 
-  getInStockProducts() {
-    let counter = 0;
+  getNumberOfInStockProducts() {
+    let inStockCounter = 0;
     for (let index = 0; index < this.products.length; index++) {
-      const element = this.products[index];
-      if (element.stock > 0) {
-        counter++;
+      const product = this.products[index];
+      if (product.stock > 0) {
+        inStockCounter++;
       }
     }
-    return counter;
+    return inStockCounter;
   }
 
-  getOutOfStockProducts() {
-    let counter = 0;
-
+  
+  
+  getNumberOfOutOfStockProducts() {
+    let outOfStockCounter = 0;
     for (let index = 0; index < this.products.length; index++) {
-      const element = this.products[index];
-
-      if (element.stock <= 0) {
-        counter++;
+      const product = this.products[index];
+      if (product.stock <= 0) {
+        outOfStockCounter++;
       }
-
     }
-    return counter;
+    return outOfStockCounter;
   }
+  
 
   setSearchText(value: string) {
     this.searchText = value;
   }
-
-
-
 
 }
